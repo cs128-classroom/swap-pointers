@@ -1,0 +1,91 @@
+<!-- <p>Define your agenda items here:</p> -->
+
+<h3>Agenda</h3>
+<ul>
+  <li>(10 minutes) Pointer and type-tag review</li>
+  <li>(20 minutes) Implement and test <code class="language-cpp">SwapPointers</code></li>
+</ul>
+
+<!-- <p>Replace XX/XX with the date of the session!</p> -->
+
+<p><b>Session:</b> Thursday, February 19</p>
+
+<p>To create your personal repository for this assignment, click on the button below to access the template repository.
+Select <b>"Use this template"</b> from the top-right corner, followed by <b>"Create a new repository"</b>. In the dialog that pops up, 
+set yourself as the owner, enter "extra-practice-02-19" as the repository name, and set the visibility to <b>Private</b>. 
+You are now ready to clone!
+</p>
+
+<!-- <p>Put the link to the activity repo in the href attribute!</p> -->
+
+<div class="text-center my-1">
+     <a class="btn btn-lg btn btn-success" href="" target="_blank">
+              <small class="me-2"><i class="fas fa-external-link-alt"></i></small>Template Repository</a></div>
+
+
+<!-- <p>Start of Prompt below:</p> -->
+
+<p>For this problem, you will implement a function that swaps the values pointed to by two pointers. Because the function accepts <code class="language-cpp">void*</code> pointers,
+you must use the provided type tags to determine the underlying data type before swapping values. See the behavior rules below for details.
+The function declaration should be in <code class="language-cpp">includes/solution.hpp</code>,
+and the definition should be in <code class="language-cpp">src/solution.cc</code>.</p>
+
+<p>Define the following function:</p>
+
+<div class="box"><pre><code class="language-cpp line-numbers">bool SwapPointers(void* a, void* b, DataType typeA, DataType typeB);</code></pre></div>
+
+<p>The function should behave as follows:</p>
+<ul>
+  <li>If <code class="language-cpp">a == nullptr</code> or <code class="language-cpp">b == nullptr</code>, throw <code class="language-cpp">std::invalid_argument</code>.</li>
+  <li>If <code class="language-cpp">typeA != typeB</code>, return <code class="language-cpp">false</code> and do not modify either value.</li>
+  <li>If <code class="language-cpp">typeA == typeB</code> and the type is supported, swap the pointed-to values and return <code class="language-cpp">true</code>.</li>
+  <li>If <code class="language-cpp">typeA == typeB</code> and the type is unsupported, return <code class="language-cpp">false</code>.</li>
+</ul>
+
+<p>Supported types:</p>
+<ul>
+  <li><code class="language-cpp">int</code></li>
+  <li><code class="language-cpp">std::string</code></li>
+</ul>
+
+<h3>Important Constraints</h3>
+<ul>
+  <li>Do not use templates.</li>
+  <li>Do not use <code class="language-cpp">dynamic_cast</code>.</li>
+  <li>Do not dereference <code class="language-cpp">void*</code> directly.</li>
+  <li>Use <code class="language-cpp">static_cast&lt;T*&gt;</code> before dereferencing.</li>
+  <li>Swap the values <code class="language-cpp">*p1</code> and <code class="language-cpp">*p2</code>, not the pointers <code class="language-cpp">a</code> and <code class="language-cpp">b</code>.</li>
+</ul>
+
+
+
+
+
+
+
+
+
+<!-- <p>End of prompt here</p> -->
+
+
+<!-- <p>You'll probably want these lines:</p> -->
+ 
+<h3>How to compile and run driver.cc</h3>
+<p>Before compiling and running driver, make sure to implement <code class="language-cpp">solution.cc</code>.</p>
+<p>To compile the program, use:</p>
+<pre class="command-line" data-prompt="[coder@localhost] ~ $">
+<code class="language-bash">make exec</code></pre>
+<p>This will create an executable named <code class="language-cpp">exec</code> in your bin folder.</p>
+<p>To run the program, use</p>
+<pre class="command-line" data-prompt="[coder@localhost] ~ $">
+<code class="language-bash">./bin/exec</code></pre>
+
+
+<h3>How to compile and run tests.cc</h3>
+<p>To compile the program, use:</p>
+<pre class="command-line" data-prompt="[coder@localhost] ~ $">
+<code class="language-bash">make tests</code></pre>
+<p>This will create an executable named <code class="language-cpp">tests</code> in your bin folder.</p>
+<p>To run the program, use</p>
+<pre class="command-line" data-prompt="[coder@localhost] ~ $">
+<code class="language-bash">./bin/tests</code></pre>
